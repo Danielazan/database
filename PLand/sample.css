@@ -1,0 +1,80 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+    display: grid;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    grid-template-rows:660px 60px;
+    grid-gap: 10px;
+    grid-template-areas: "header header header"
+                         "footer footer footer";
+}
+.sample1{
+    grid-area: header;
+    background-image:url(IMG_20210906_231533_256.jpg);
+    width: auto;
+    align-content: center;
+    
+}
+#blur.activee{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+nav{
+	flex: 1;
+	text-align: right;
+	display: flex;
+	justify-content: flex-end;
+}
+nav ul li{
+	list-style: none;
+	display: inline-block;
+	margin-right: 30px;
+}
+nav ul li a{
+	text-decoration: none;
+    color: white;
+}
+.hot{
+    text-decoration: none;
+}
+.hot:hover{
+    border: solid 1px transparent;
+    border-radius: 10px;
+    background: transparent;
+    padding: 5px;
+    transform: scale(1.1);
+    box-shadow:  -2px 2px 0px 0px rgb(177, 175, 175),2px -2px 0px 0px gray;
+    
+}
+
+.sample1 h1::first-letter{
+    font-size: 34px;
+    color: yellow;
+}
+.sample1 h1{
+    color: white;
+    font-size: 26px;
+    margin: 10px;
+}
+.sample3{
+    grid-area: footer;
+    background: rgba(0, 0, 0, 0.21);
+    
+}
+.mark, ul, li{
+    display: flex;
+    justify-content: center;
+}
+.mark, ul, li, a{
+    text-decoration: none;
+    word-spacing: 10px;
+    
+}
